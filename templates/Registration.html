@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet" /><script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
+	<link href="{{ url_for('static', filename='css/css.css') }}" rel="stylesheet" /><script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script><script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
+</head>
+<body>
+<div class="wrap">
+<div class="Registration">
+<h2>화자등록</h2>
+
+<div class="Regis_name">
+<h4>이름</h4>
+<input id="name" name="name" placeholder="이름" type="text" /></div>
+
+<div class="Regis_age">
+<h4>나이</h4>
+<input id="age" name="age" placeholder="나이" type="number" /></div>
+
+<div class="Regis_sex">성별 <input id="male" name="sex" type="radio" value="male" /> <label for="male">male</label> <input id="female" name="sex" type="radio" value="female" /> <label for="female">female</label></div>
+
+<div class="submit"><button class="button" id="voice_registration" name="voiceReg" type="button">목소리 등록</button><!-- <a href="#" class"button" name="voiceReg">목소리 등록</a> --><br />
+<br />
+<button class="button" id="check_voice" name="voice" type="button">등록된 목소리 확인</button><!-- <a href="#" class"button" name="voice">등록된 목소리 확인</a> --><br />
+<br />
+<!-- <a href="#" class"button" name="delete">삭제</a> --><button class="button" name="delete" type="button">삭제</button><br />
+<br />
+<button class="button" id="voice_recognition" name="voiceRec" type="button">화자인식 진행</button></div>
+</div>
+</div>
+<script src="{{ url_for('static', filename='js/Registration.js') }}"></script>
+<script src="{{ url_for('static', filename='js/Recognition.js') }}"></script></body>
+</html>
