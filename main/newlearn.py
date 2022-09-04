@@ -89,7 +89,7 @@ def newData_learn(model_dir, record_dir):
   recval_x = np.expand_dims(recval_x, -1)
   print("record train size : ",rectrain_x.shape[0])
 
-  net = Dense(len(record_list), activation='softmax' ,name="dense_a")(base_model.layers[-2].output)
+  net = Dense(rectrain_y.shape[1], activation='softmax' ,name="dense_a")(base_model.layers[-2].output)
   model = Model(inputs = base_model.input, outputs = net)
 
   model.summary()
@@ -127,3 +127,8 @@ def make_predx(test_dir, input_shape):
   test_data = np.expand_dims(test_data, -1)
 
   return test_data
+
+def model_update(model_path, record_path):
+  model,record_target= newData_learn(model_path,record_path)
+
+  model.save("/content/gdrive//MyDrive/VoiceRecognition/main/demo_model.h5")
