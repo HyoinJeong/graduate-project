@@ -41,3 +41,30 @@ var data = {
 var data = name+age+sex;
 window.location.href = '/voicecheck/'+decodeURI(data);
   })
+  
+ 
+ $('#delete_user').click(function(){
+     name=$('#name').val();
+age=$('#age').val();
+sex=$("input[name='sex']:checked").val(); 
+// alert(name+age+sex);
+
+var data = {
+     'name':name,
+     'age':age,
+     'sex':sex
+   }
+
+var data = name+age+sex;
+window.location.href = '/delete_user/'+decodeURI(data);
+ })
+ 
+  $('#home').click(function(){
+    //   alert(window.location.href);
+    //   alert(window.location.hostname);
+      window.location.href ='http://'+window.location.hostname;
+ })
+ 
+   $('#training').click(function(){
+      window.location.href ='/training';
+ })

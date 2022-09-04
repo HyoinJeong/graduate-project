@@ -6,29 +6,25 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet" /><script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
 	<link href="{{ url_for('static', filename='css/css.css') }}" rel="stylesheet" /><script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script><script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
 </head>
-<body>
-    {%with messages = get_flashed_messages()%}
-  {%if messages %}
-    <script type="text/javascript">
+<body>{%with messages = get_flashed_messages()%} {%if messages %} <script type="text/javascript">
       alert("{{messages[-1]}}");
       history.go(-1)
-    </script>
-    {%endif%}
-  {%endwith%}
+    </script> {%endif%} {%endwith%}
 <div class="wrap">
-    <div class="Registration">
-        <p>
-        <h2>목소리 확인</h2>
-         {% for list in voicelist %}
-    <div class="audio">
-      <div class="list">
-          <a href="{{ list }}" target='_blank'>{{ list }}</a>
-       </div>
-    </div>
-{% endfor %}
-        </p>
+<div class="Registration">
+  <button class="button" id="home" name="training" type="button">Home</button>
+<p>&nbsp;</p>
 
-    </div>
+<h2>목소리 확인</h2>
+{% for list in voicelist %}
+
+<div class="audio">
+<div class="list"><a href="{{ list }}" target="_blank">{{ list }}</a></div>
 </div>
-<script src="{{ url_for('static', filename='js/Registration.js') }}"></script></body>
+{% endfor %}
+
+<p>&nbsp;</p>
+</div>
+</div>
+<script src="{{ url_for('static', filename='js/Registration.js') }}"></script><script src="{{ url_for('static', filename='js/Recognition.js') }}"></script></body>
 </html>

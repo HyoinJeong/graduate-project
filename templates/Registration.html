@@ -9,8 +9,12 @@
 <body>
 <div class="wrap">
 <div class="Registration">
+  <div>
 <h2>화자등록</h2>
-
+<button class="button" id="training" name="training" type="button">Training</button>
+  <button class="button" id="home" name="home" type="button">Home</button><br />
+        
+  </div>
 <div class="Regis_name">
 <h4>이름</h4>
 <input id="name" name="name" placeholder="이름" type="text" /></div>
@@ -25,11 +29,10 @@
 <br />
 <button class="button" id="check_voice" name="voice" type="button">등록된 목소리 확인</button><!-- <a href="#" class"button" name="voice">등록된 목소리 확인</a> --><br />
 <br />
-<!-- <a href="#" class"button" name="delete">삭제</a> --><button class="button" name="delete" type="button">삭제</button><br />
+<!-- <a href="#" class"button" name="delete">삭제</a> --><button class="button" id="delete_user" name="delete" type="button">삭제</button><br />
 <br />
 <button class="button" id="voice_recognition" name="voiceRec" type="button">화자인식 진행</button></div>
 </div>
 </div>
-<script src="{{ url_for('static', filename='js/Registration.js') }}"></script>
-<script src="{{ url_for('static', filename='js/Recognition.js') }}"></script></body>
+<script src="{{ url_for('static', filename='js/Registration.js') }}"></script><script src="{{ url_for('static', filename='js/Recognition.js') }}"></script></body>
 </html>
