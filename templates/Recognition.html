@@ -12,6 +12,7 @@
     </script> {%endif%} {%endwith%}
 <div class="wrap">
 <div class="Registration">
+  <button class="button" id="home" name="training" type="button">Home</button><br />
 <h2>화자인식진행</h2>
 
 <div class="Recog">&nbsp;
@@ -21,5 +22,5 @@
 <div class="submit"><button class="button" id="recording_recognition" name="voiceRec" type="button">인식</button></div>
 </div>
 </div>
-<script src="{{ url_for('static', filename='js/Recognition.js') }}"></script></body>
+<script src="{{ url_for('static', filename='js/Registration.js') }}"></script><script src="{{ url_for('static', filename='js/Recognition.js') }}"></script></body>
 </html>

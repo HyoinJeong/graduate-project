@@ -119,3 +119,27 @@ h2 {
   border-collapse:collapse;
   letter-spacing: 2px;
 }
+
+.checklist{
+  overflow: auto;
+}
+
+#training, #home{
+width: 50px;
+  height: 25px;
+  border: 0;
+  outline: none;
+  border-radius: 40px;
+  background: linear-gradient(to left, rgb(255, 77, 46), rgb(255, 155, 47));
+  color: white;
+  font-size: 0.5em;
+  letter-spacing: 1px;
+}
+#training:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
+#home:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
