@@ -11,11 +11,13 @@
       history.go(-1)
     </script> {%endif%} {%endwith%}
 <div class="wrap">
-<div class="Registration">
-  <button class="button" id="home" name="training" type="button">Home</button>
+<div class="Registration" id="checklist">
+	<button class="button" id="home" name="training" type="button">Home</button>
+	<br>  
+	<h2>목소리 확인</h2>
 <p>&nbsp;</p>
 
-<h2>목소리 확인</h2>
+
 {% for list in voicelist %}
 
 <div class="audio">
